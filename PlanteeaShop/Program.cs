@@ -1,7 +1,12 @@
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
+using PlanteeaShop.Data;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
+builder.Services.AddDbContext<PlanteeaShopContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("PlanteeaShopContext") ?? throw new InvalidOperationException("Connection string 'PlanteeaShopContext' not found.")));
 
 var app = builder.Build();
 

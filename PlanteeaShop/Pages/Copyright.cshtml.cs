@@ -3,11 +3,11 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace PlanteeaShop.Pages
 {
-    public class PrivacyModel : PageModel
+    public class CopyrightModel : PageModel
     {
-        private readonly ILogger<PrivacyModel> _logger;
+        private readonly ILogger<CopyrightModel> _logger;
 
-        public PrivacyModel(ILogger<PrivacyModel> logger)
+        public CopyrightModel(ILogger<CopyrightModel> logger)
         {
             _logger = logger;
         }

@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using PlanteeaShop.Data;
 using PlanteeaShop.Models;
 
-namespace PlanteeaShop.Pages.Products
+namespace PlanteeaShop.Pages.Sellers
 {
     public class IndexModel : PageModel
     {
@@ -26,8 +26,7 @@ namespace PlanteeaShop.Pages.Products
             if (_context.Product != null)
             {
                 Product = await _context.Product
-                    .Include(b=>b.Seller)
-                    .ToListAsync();
+                .Include(p => p.Seller).ToListAsync();
             }
         }
     }

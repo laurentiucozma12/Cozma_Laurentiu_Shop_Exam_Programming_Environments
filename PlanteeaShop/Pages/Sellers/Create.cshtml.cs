@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using PlanteeaShop.Data;
 using PlanteeaShop.Models;
 
-namespace PlanteeaShop.Pages.Products
+namespace PlanteeaShop.Pages.Sellers
 {
     public class CreateModel : PageModel
     {
@@ -21,7 +21,7 @@ namespace PlanteeaShop.Pages.Products
 
         public IActionResult OnGet()
         {
-            ViewData["SellerID"] = new SelectList(_context.Set<Seller>(), "ID", "SellerName");
+        ViewData["SellerID"] = new SelectList(_context.Set<Seller>(), "ID", "ID");
             return Page();
         }
 

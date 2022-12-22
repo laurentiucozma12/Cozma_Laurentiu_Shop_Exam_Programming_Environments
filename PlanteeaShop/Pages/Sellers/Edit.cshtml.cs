@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore;
 using PlanteeaShop.Data;
 using PlanteeaShop.Models;
 
-namespace PlanteeaShop.Pages.Products
+namespace PlanteeaShop.Pages.Sellers
 {
     public class EditModel : PageModel
     {
@@ -36,8 +36,7 @@ namespace PlanteeaShop.Pages.Products
                 return NotFound();
             }
             Product = product;
-
-            ViewData["SellerID"] = new SelectList(_context.Set<Seller>(), "ID", "SellerName");
+           ViewData["SellerID"] = new SelectList(_context.Set<Seller>(), "ID", "ID");
             return Page();
         }
 

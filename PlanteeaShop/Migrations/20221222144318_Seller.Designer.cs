@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using PlanteeaShop.Data;
 
@@ -11,9 +12,10 @@ using PlanteeaShop.Data;
 namespace PlanteeaShop.Migrations
 {
     [DbContext(typeof(PlanteeaShopContext))]
-    partial class PlanteeaShopContextModelSnapshot : ModelSnapshot
+    [Migration("20221222144318_Seller")]
+    partial class Seller
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

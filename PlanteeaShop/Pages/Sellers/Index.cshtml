@@ -1,5 +1,5 @@
 ﻿@page
-@model PlanteeaShop.Pages.Products.IndexModel
+@model PlanteeaShop.Pages.Sellers.IndexModel
 
 @{
     ViewData["Title"] = "Index";
@@ -23,7 +23,7 @@
                 @Html.DisplayNameFor(model => model.Product[0].Price)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Product[0].Seller.SellerName)
+                @Html.DisplayNameFor(model => model.Product[0].Seller)
             </th>
         </tr>
     </thead>
@@ -40,7 +40,7 @@
                 @Html.DisplayFor(modelItem => item.Price)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Seller.SellerName)
+                @Html.DisplayFor(modelItem => item.Seller.ID)
             </td>
             <td>
                 <a asp-page="./Edit" asp-route-id="@item.ID">Edit</a> |

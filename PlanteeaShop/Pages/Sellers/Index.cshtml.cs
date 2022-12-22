@@ -19,14 +19,13 @@ namespace PlanteeaShop.Pages.Sellers
             _context = context;
         }
 
-        public IList<Product> Product { get;set; } = default!;
+        public IList<Seller> Seller { get;set; } = default!;
 
         public async Task OnGetAsync()
         {
-            if (_context.Product != null)
+            if (_context.Seller != null)
             {
-                Product = await _context.Product
-                .Include(p => p.Seller).ToListAsync();
+                Seller = await _context.Seller.ToListAsync();
             }
         }
     }

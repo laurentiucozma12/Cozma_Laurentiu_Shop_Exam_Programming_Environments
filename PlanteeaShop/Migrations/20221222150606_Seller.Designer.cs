@@ -12,7 +12,7 @@ using PlanteeaShop.Data;
 namespace PlanteeaShop.Migrations
 {
     [DbContext(typeof(PlanteeaShopContext))]
-    [Migration("20221222144318_Seller")]
+    [Migration("20221222150606_Seller")]
     partial class Seller
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

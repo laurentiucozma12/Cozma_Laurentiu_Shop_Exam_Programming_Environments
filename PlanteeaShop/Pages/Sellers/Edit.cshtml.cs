@@ -21,22 +21,21 @@ namespace PlanteeaShop.Pages.Sellers
         }
 
         [BindProperty]
-        public Product Product { get; set; } = default!;
+        public Seller Seller { get; set; } = default!;
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {
-            if (id == null || _context.Product == null)
+            if (id == null || _context.Seller == null)
             {
                 return NotFound();
             }
 
-            var product =  await _context.Product.FirstOrDefaultAsync(m => m.ID == id);
-            if (product == null)
+            var seller =  await _context.Seller.FirstOrDefaultAsync(m => m.ID == id);
+            if (seller == null)
             {
                 return NotFound();
             }
-            Product = product;
-           ViewData["SellerID"] = new SelectList(_context.Set<Seller>(), "ID", "ID");
+            Seller = seller;
             return Page();
         }
 
@@ -49,7 +48,7 @@ namespace PlanteeaShop.Pages.Sellers
                 return Page();
             }
 
-            _context.Attach(Product).State = EntityState.Modified;
+            _context.Attach(Seller).State = EntityState.Modified;
 
             try
             {
@@ -57,7 +56,7 @@ namespace PlanteeaShop.Pages.Sellers
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!ProductExists(Product.ID))
+                if (!SellerExists(Seller.ID))
                 {
                     return NotFound();
                 }
@@ -70,9 +69,9 @@ namespace PlanteeaShop.Pages.Sellers
             return RedirectToPage("./Index");
         }
 
-        private bool ProductExists(int id)
+        private bool SellerExists(int id)
         {
-          return _context.Product.Any(e => e.ID == id);
+          return _context.Seller.Any(e => e.ID == id);
         }
     }
 }

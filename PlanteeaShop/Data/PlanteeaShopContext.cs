@@ -15,5 +15,7 @@ namespace PlanteeaShop.Data
         }
 
         public DbSet<PlanteeaShop.Models.Product> Product { get; set; } = default!;
+
+        public DbSet<PlanteeaShop.Models.Seller> Seller { get; set; }
     }
 }

@@ -21,12 +21,11 @@ namespace PlanteeaShop.Pages.Sellers
 
         public IActionResult OnGet()
         {
-        ViewData["SellerID"] = new SelectList(_context.Set<Seller>(), "ID", "ID");
             return Page();
         }
 
         [BindProperty]
-        public Product Product { get; set; }
+        public Seller Seller { get; set; }
         
 
         // To protect from overposting attacks, see https://aka.ms/RazorPagesCRUD
@@ -37,7 +36,7 @@ namespace PlanteeaShop.Pages.Sellers
                 return Page();
             }
 
-            _context.Product.Add(Product);
+            _context.Seller.Add(Seller);
             await _context.SaveChangesAsync();
 
             return RedirectToPage("./Index");

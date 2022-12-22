@@ -19,23 +19,23 @@ namespace PlanteeaShop.Pages.Sellers
             _context = context;
         }
 
-      public Product Product { get; set; }
+      public Seller Seller { get; set; }
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {
-            if (id == null || _context.Product == null)
+            if (id == null || _context.Seller == null)
             {
                 return NotFound();
             }
 
-            var product = await _context.Product.FirstOrDefaultAsync(m => m.ID == id);
-            if (product == null)
+            var seller = await _context.Seller.FirstOrDefaultAsync(m => m.ID == id);
+            if (seller == null)
             {
                 return NotFound();
             }
             else 
             {
-                Product = product;
+                Seller = seller;
             }
             return Page();
         }

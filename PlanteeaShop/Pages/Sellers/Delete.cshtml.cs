@@ -20,40 +20,40 @@ namespace PlanteeaShop.Pages.Sellers
         }
 
         [BindProperty]
-      public Product Product { get; set; }
+      public Seller Seller { get; set; }
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {
-            if (id == null || _context.Product == null)
+            if (id == null || _context.Seller == null)
             {
                 return NotFound();
             }
 
-            var product = await _context.Product.FirstOrDefaultAsync(m => m.ID == id);
+            var seller = await _context.Seller.FirstOrDefaultAsync(m => m.ID == id);
 
-            if (product == null)
+            if (seller == null)
             {
                 return NotFound();
             }
             else 
             {
-                Product = product;
+                Seller = seller;
             }
             return Page();
         }
 
         public async Task<IActionResult> OnPostAsync(int? id)
         {
-            if (id == null || _context.Product == null)
+            if (id == null || _context.Seller == null)
             {
                 return NotFound();
             }
-            var product = await _context.Product.FindAsync(id);
+            var seller = await _context.Seller.FindAsync(id);
 
-            if (product != null)
+            if (seller != null)
             {
-                Product = product;
-                _context.Product.Remove(Product);
+                Seller = seller;
+                _context.Seller.Remove(Seller);
                 await _context.SaveChangesAsync();
             }
 

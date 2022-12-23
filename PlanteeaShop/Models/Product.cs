@@ -8,5 +8,8 @@
         public decimal Price { get; set; }
         public int? SellerID { get; set; }
         public Seller? Seller { get; set; }
+
+        public int? ProductOriginID { get; set; }
+        public ProductOrigin? ProductOrigin { get; set; }
     }
 }

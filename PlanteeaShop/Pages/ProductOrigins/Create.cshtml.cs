@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using PlanteeaShop.Data;
 using PlanteeaShop.Models;
 
-namespace PlanteeaShop.Pages.Products
+namespace PlanteeaShop.Pages.ProductOrigins
 {
     public class CreateModel : PageModel
     {
@@ -21,14 +21,11 @@ namespace PlanteeaShop.Pages.Products
 
         public IActionResult OnGet()
         {
-            ViewData["SellerID"] = new SelectList(_context.Set<Seller>(), "ID", "SellerName");
-            ViewData["ProductOriginID"] = new SelectList(_context.Set<ProductOrigin>(), "ID", "OriginName");
-
             return Page();
         }
 
         [BindProperty]
-        public Product Product { get; set; }
+        public ProductOrigin ProductOrigin { get; set; }
         
 
         // To protect from overposting attacks, see https://aka.ms/RazorPagesCRUD
@@ -39,7 +36,7 @@ namespace PlanteeaShop.Pages.Products
                 return Page();
             }
 
-            _context.Product.Add(Product);
+            _context.ProductOrigin.Add(ProductOrigin);
             await _context.SaveChangesAsync();
 
             return RedirectToPage("./Index");

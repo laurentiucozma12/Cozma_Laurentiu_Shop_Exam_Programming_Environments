@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using PlanteeaShop.Data;
 using PlanteeaShop.Models;
 
-namespace PlanteeaShop.Pages.Products
+namespace PlanteeaShop.Pages.ProductOrigins
 {
     public class IndexModel : PageModel
     {
@@ -19,19 +19,13 @@ namespace PlanteeaShop.Pages.Products
             _context = context;
         }
 
-        public IList<Product> Product { get; set; } = default!;
+        public IList<ProductOrigin> ProductOrigin { get;set; } = default!;
 
         public async Task OnGetAsync()
         {
-            if (_context.Product != null)
+            if (_context.ProductOrigin != null)
             {
-                Product = await _context.Product
-                    .Include(b=>b.Seller)
-                    .ToListAsync();
-
-                Product = await _context.Product
-                    .Include(c => c.ProductOrigin)
-                    .ToListAsync();
+                ProductOrigin = await _context.ProductOrigin.ToListAsync();
             }
         }
     }

@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore;
 using PlanteeaShop.Data;
 using PlanteeaShop.Models;
 
-namespace PlanteeaShop.Pages.Products
+namespace PlanteeaShop.Pages.ProductOrigins
 {
     public class EditModel : PageModel
     {
@@ -21,26 +21,21 @@ namespace PlanteeaShop.Pages.Products
         }
 
         [BindProperty]
-        public Product Product { get; set; } = default!;
+        public ProductOrigin ProductOrigin { get; set; } = default!;
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {
-            if (id == null || _context.Product == null)
+            if (id == null || _context.ProductOrigin == null)
             {
                 return NotFound();
             }
 
-            var product =  await _context.Product.FirstOrDefaultAsync(m => m.ID == id);
-            if (product == null)
+            var productorigin =  await _context.ProductOrigin.FirstOrDefaultAsync(m => m.ID == id);
+            if (productorigin == null)
             {
                 return NotFound();
             }
-
-            Product = product;
-
-            ViewData["SellerID"] = new SelectList(_context.Set<Seller>(), "ID", "SellerName");
-            ViewData["ProductOriginId"] = new SelectList(_context.Set<ProductOrigin>(), "ID", "OriginName");
-
+            ProductOrigin = productorigin;
             return Page();
         }
 
@@ -53,7 +48,7 @@ namespace PlanteeaShop.Pages.Products
                 return Page();
             }
 
-            _context.Attach(Product).State = EntityState.Modified;
+            _context.Attach(ProductOrigin).State = EntityState.Modified;
 
             try
             {
@@ -61,7 +56,7 @@ namespace PlanteeaShop.Pages.Products
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!ProductExists(Product.ID))
+                if (!ProductOriginExists(ProductOrigin.ID))
                 {
                     return NotFound();
                 }
@@ -74,9 +69,9 @@ namespace PlanteeaShop.Pages.Products
             return RedirectToPage("./Index");
         }
 
-        private bool ProductExists(int id)
+        private bool ProductOriginExists(int id)
         {
-          return _context.Product.Any(e => e.ID == id);
+          return _context.ProductOrigin.Any(e => e.ID == id);
         }
     }
 }

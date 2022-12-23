@@ -1,11 +1,11 @@
 ﻿@page
-@model PlanteeaShop.Pages.Sellers.IndexModel
+@model PlanteeaShop.Pages.ProductOrigins.IndexModel
 
 @{
     ViewData["Title"] = "Shop";
 }
 
-<h1>Sellers List</h1>
+<h1>Product's Origin List</h1>
 
 <p>
     <a asp-page="Create">Create New</a>
@@ -14,16 +14,16 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.Seller[0].SellerName)
+                @Html.DisplayNameFor(model => model.ProductOrigin[0].OriginName)
             </th>
             <th></th>
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model.Seller) {
+@foreach (var item in Model.ProductOrigin) {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.SellerName)
+                @Html.DisplayFor(modelItem => item.OriginName)
             </td>
             <td>
                 <a asp-page="./Edit" asp-route-id="@item.ID">Edit</a> |

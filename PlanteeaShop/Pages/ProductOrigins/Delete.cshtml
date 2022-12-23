@@ -1,27 +1,27 @@
 ﻿@page
-@model PlanteeaShop.Pages.Sellers.DeleteModel
+@model PlanteeaShop.Pages.ProductOrigins.DeleteModel
 
 @{
     ViewData["Title"] = "Shop";
 }
 
-<h1>Delete Sellers</h1>
+<h1>Delete Product's Origin</h1>
 
 <h3>Are you sure you want to delete this?</h3>
 <div>
-    <h4>Seller</h4>
+    <h4>ProductOrigin</h4>
     <hr />
     <dl class="row">
         <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Seller.SellerName)
+            @Html.DisplayNameFor(model => model.ProductOrigin.OriginName)
         </dt>
         <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Seller.SellerName)
+            @Html.DisplayFor(model => model.ProductOrigin.OriginName)
         </dd>
     </dl>
     
     <form method="post">
-        <input type="hidden" asp-for="Seller.ID" />
+        <input type="hidden" asp-for="ProductOrigin.ID" />
         <input type="submit" value="Delete" class="btn btn-danger" /> |
         <a asp-page="./Index">Back to List</a>
     </form>

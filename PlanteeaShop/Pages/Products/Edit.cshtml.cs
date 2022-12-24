@@ -13,9 +13,9 @@ namespace Shop.Pages.Products
 {
     public class EditModel : PageModel
     {
-        private readonly Shop.Data.PlanteeaShopContext _context;
+        private readonly Shop.Data.ShopContext _context;
 
-        public EditModel(Shop.Data.PlanteeaShopContext context)
+        public EditModel(Shop.Data.ShopContext context)
         {
             _context = context;
         }

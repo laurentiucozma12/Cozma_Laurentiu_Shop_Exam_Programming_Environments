@@ -12,9 +12,9 @@ namespace Shop.Pages.Sellers
 {
     public class IndexModel : PageModel
     {
-        private readonly Shop.Data.PlanteeaShopContext _context;
+        private readonly Shop.Data.ShopContext _context;
 
-        public IndexModel(Shop.Data.PlanteeaShopContext context)
+        public IndexModel(Shop.Data.ShopContext context)
         {
             _context = context;
         }

@@ -12,9 +12,9 @@ namespace Shop.Pages.ProductOrigins
 {
     public class DetailsModel : PageModel
     {
-        private readonly Shop.Data.PlanteeaShopContext _context;
+        private readonly Shop.Data.ShopContext _context;
 
-        public DetailsModel(Shop.Data.PlanteeaShopContext context)
+        public DetailsModel(Shop.Data.ShopContext context)
         {
             _context = context;
         }

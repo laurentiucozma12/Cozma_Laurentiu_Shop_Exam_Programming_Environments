@@ -10,8 +10,8 @@ using Shop.Data;
 
 namespace Shop.Migrations
 {
-    [DbContext(typeof(PlanteeaShopContext))]
-    partial class PlanteeaShopContextModelSnapshot : ModelSnapshot
+    [DbContext(typeof(ShopContext))]
+    partial class ShopContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)
         {

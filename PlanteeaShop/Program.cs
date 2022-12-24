@@ -5,7 +5,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
-builder.Services.AddDbContext<PlanteeaShopContext>(options =>
+builder.Services.AddDbContext<ShopContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("PlanteeaShopContext") ?? throw new InvalidOperationException("Connection string 'PlanteeaShopContext' not found.")));
 
 var app = builder.Build();

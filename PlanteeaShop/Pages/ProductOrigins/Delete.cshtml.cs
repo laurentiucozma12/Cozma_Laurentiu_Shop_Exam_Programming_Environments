@@ -12,9 +12,9 @@ namespace Shop.Pages.ProductOrigins
 {
     public class DeleteModel : PageModel
     {
-        private readonly Shop.Data.PlanteeaShopContext _context;
+        private readonly Shop.Data.ShopContext _context;
 
-        public DeleteModel(Shop.Data.PlanteeaShopContext context)
+        public DeleteModel(Shop.Data.ShopContext context)
         {
             _context = context;
         }

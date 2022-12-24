@@ -7,9 +7,9 @@ using Shop.Models;
 
 namespace Shop.Data
 {
-    public class PlanteeaShopContext : DbContext
+    public class ShopContext : DbContext
     {
-        public PlanteeaShopContext (DbContextOptions<PlanteeaShopContext> options)
+        public ShopContext (DbContextOptions<ShopContext> options)
             : base(options)
         {
         }

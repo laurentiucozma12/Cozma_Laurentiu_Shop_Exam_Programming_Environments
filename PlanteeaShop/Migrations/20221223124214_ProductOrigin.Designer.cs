@@ -11,7 +11,7 @@ using Shop.Data;
 
 namespace Shop.Migrations
 {
-    [DbContext(typeof(PlanteeaShopContext))]
+    [DbContext(typeof(ShopContext))]
     [Migration("20221223124214_ProductOrigin")]
     partial class ProductOrigin
     {

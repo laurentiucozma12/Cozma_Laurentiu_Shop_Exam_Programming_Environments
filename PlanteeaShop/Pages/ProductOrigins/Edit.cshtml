@@ -14,12 +14,12 @@
         <form method="post">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="ProductOrigin.ID" />
-            <div class="form-group">
+            <div class="form-group mb-3">
                 <label asp-for="ProductOrigin.OriginName" class="control-label"></label>
                 <input asp-for="ProductOrigin.OriginName" class="form-control" />
                 <span asp-validation-for="ProductOrigin.OriginName" class="text-danger"></span>
             </div>
-            <div class="form-group">
+            <div class="form-group mb-4">
                 <input type="submit" value="Save" class="btn btn-primary" />
             </div>
         </form>

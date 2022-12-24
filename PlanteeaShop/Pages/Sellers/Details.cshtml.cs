@@ -5,16 +5,16 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
-using PlanteeaShop.Data;
-using PlanteeaShop.Models;
+using Shop.Data;
+using Shop.Models;
 
-namespace PlanteeaShop.Pages.Sellers
+namespace Shop.Pages.Sellers
 {
     public class DetailsModel : PageModel
     {
-        private readonly PlanteeaShop.Data.PlanteeaShopContext _context;
+        private readonly Shop.Data.PlanteeaShopContext _context;
 
-        public DetailsModel(PlanteeaShop.Data.PlanteeaShopContext context)
+        public DetailsModel(Shop.Data.PlanteeaShopContext context)
         {
             _context = context;
         }

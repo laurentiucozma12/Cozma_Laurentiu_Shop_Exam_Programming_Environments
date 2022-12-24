@@ -6,16 +6,16 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using PlanteeaShop.Data;
-using PlanteeaShop.Models;
+using Shop.Data;
+using Shop.Models;
 
-namespace PlanteeaShop.Pages.Products
+namespace Shop.Pages.Products
 {
     public class EditModel : PageModel
     {
-        private readonly PlanteeaShop.Data.PlanteeaShopContext _context;
+        private readonly Shop.Data.PlanteeaShopContext _context;
 
-        public EditModel(PlanteeaShop.Data.PlanteeaShopContext context)
+        public EditModel(Shop.Data.PlanteeaShopContext context)
         {
             _context = context;
         }

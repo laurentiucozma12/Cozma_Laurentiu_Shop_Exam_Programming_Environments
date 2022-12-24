@@ -4,11 +4,11 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using PlanteeaShop.Data;
+using Shop.Data;
 
 #nullable disable
 
-namespace PlanteeaShop.Migrations
+namespace Shop.Migrations
 {
     [DbContext(typeof(PlanteeaShopContext))]
     partial class PlanteeaShopContextModelSnapshot : ModelSnapshot

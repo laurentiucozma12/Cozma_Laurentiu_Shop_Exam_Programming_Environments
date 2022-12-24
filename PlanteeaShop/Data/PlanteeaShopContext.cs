@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
-using PlanteeaShop.Models;
+using Shop.Models;
 
-namespace PlanteeaShop.Data
+namespace Shop.Data
 {
     public class PlanteeaShopContext : DbContext
     {
@@ -14,10 +14,10 @@ namespace PlanteeaShop.Data
         {
         }
 
-        public DbSet<PlanteeaShop.Models.Product> Product { get; set; } = default!;
+        public DbSet<Shop.Models.Product> Product { get; set; } = default!;
 
-        public DbSet<PlanteeaShop.Models.Seller> Seller { get; set; }
+        public DbSet<Shop.Models.Seller> Seller { get; set; }
 
-        public DbSet<PlanteeaShop.Models.ProductOrigin> ProductOrigin { get; set; }
+        public DbSet<Shop.Models.ProductOrigin> ProductOrigin { get; set; }
     }
 }

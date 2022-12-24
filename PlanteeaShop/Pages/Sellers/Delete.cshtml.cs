@@ -5,16 +5,16 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
-using PlanteeaShop.Data;
-using PlanteeaShop.Models;
+using Shop.Data;
+using Shop.Models;
 
-namespace PlanteeaShop.Pages.Sellers
+namespace Shop.Pages.Sellers
 {
     public class DeleteModel : PageModel
     {
-        private readonly PlanteeaShop.Data.PlanteeaShopContext _context;
+        private readonly Shop.Data.PlanteeaShopContext _context;
 
-        public DeleteModel(PlanteeaShop.Data.PlanteeaShopContext context)
+        public DeleteModel(Shop.Data.PlanteeaShopContext context)
         {
             _context = context;
         }

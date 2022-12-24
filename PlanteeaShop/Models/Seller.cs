@@ -1,4 +1,4 @@
-﻿namespace PlanteeaShop.Models
+﻿namespace Shop.Models
 {
     public class Seller
     {

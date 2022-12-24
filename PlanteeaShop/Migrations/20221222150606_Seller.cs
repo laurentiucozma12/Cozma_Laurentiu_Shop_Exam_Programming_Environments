@@ -2,7 +2,7 @@
 
 #nullable disable
 
-namespace PlanteeaShop.Migrations
+namespace Shop.Migrations
 {
     public partial class Seller : Migration
     {

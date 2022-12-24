@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace PlanteeaShop.Pages
+namespace Shop.Pages
 {
     public class IndexModel : PageModel
     {
